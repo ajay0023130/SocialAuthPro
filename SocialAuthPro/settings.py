@@ -138,6 +138,7 @@ EMAIL_HOST_PASSWORD = 'otgudmecqmmezdqb'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+
 PASSWORD_HASHERS = [
 'django.contrib.auth.hashers.PBKDF2PasswordHasher',
 'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
@@ -148,3 +149,8 @@ PASSWORD_HASHERS = [
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+]
