@@ -39,7 +39,3 @@ def dashboard(request):
 
 
 
-#add custom logout
-def custom_logout(request):
-    logout(request)
-    return render(request,'registration/logged_out.html')
